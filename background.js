@@ -36,3 +36,10 @@ chrome.webNavigation.onCommitted.addListener(function (tab) {
     )
   }
 });
+
+// This function removes ads on Linkedin
+function runLinkedinScript() {
+  // inject the script form file into the webpage
+  chrome.tabs.executeScript({file: "linkedin.js"});
+  return true;
+}
